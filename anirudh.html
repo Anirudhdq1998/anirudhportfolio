@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/anirudh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.0/photoswipe.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Portfolio</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#skills">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h4>Hello, I'm</h4>
+                        <h1 class="typing-animation">Anirudh</h1>
+                        <h3>Front-End Developer</h3>
+                        <p>I’m a Front-End Developer skilled in HTML, CSS, JavaScript, React, creating responsive, user-friendly website  with a focus on UI/UX and performance.</p>
+                        <a href="#contact" class="btn">Contact Me</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="dq2.jpg" alt="Your Name - Profession" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="slide-left">
+            <div class="container">
+              <h2 class="section-title">My Skills</h2>
+              <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                  <img src="freepik__upload__16423.png" alt="Design" class="skill-icon">
+                  <h3>UI/UX Design</h3>
+                  <p>Creating intuitive user interfaces with modern design principles and attention to user experience.</p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                  <img src="freepik__upload__2178.jpeg" alt="Development" class="skill-icon">
+                  <h3>Web Development</h3>
+                  <p>Building responsive websites using HTML, CSS, and JavaScript with modern frameworks.</p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                  <img src="freepik__upload__27195.jpeg" alt="Mobile" class="skill-icon">
+                  <h3>Mobile Apps</h3>
+                  <p>Developing cross-platform mobile applications with React Native and Flutter.</p>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                  <img src="freepik__upload__74292.jpeg" alt="SEO" class="skill-icon">
+                  <h3>SEO Optimization</h3>
+                  <p>Improving search rankings through technical SEO and content strategy.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Add this as your gallery section -->
+          <section id="gallery" class="gallery-section">
+            <div class="container">
+              <h2 class="section-title">My Gallery</h2>
+              <div class="gallery-filter">
+                  <button class="filter-btn active" data-filter="all">All</button>
+                  <button class="filter-btn" data-filter="design">Design</button>
+                  <button class="filter-btn" data-filter="art">Art</button>
+                  <button class="filter-btn" data-filter="photography">Photography</button>
+              </div>
+              
+              <div class="gallery-grid">
+                <!-- Design Items (static) -->
+                <div class="gallery-item design static-item" data-category="design">
+                  <img src="freepik__upload__16423.png" alt="Design Project 1" class="gallery-img">
+                  <div class="gallery-overlay">
+                    <div class="overlay-content">
+                      <h3>UI Design</h3>
+                      <p>Mobile App Concept</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Art Items (clickable) -->
+                <div class="gallery-item art clickable-item" data-category="art">
+                  <img src="freepik__upload__2178.jpeg" alt="Digital Painting 1" class="gallery-img">
+                  <div class="gallery-overlay">
+                    <div class="overlay-content">
+                      <h3>Digital Painting</h3>
+                      <p>2023 Collection</p>
+                      <i class="fas fa-expand zoom-icon"></i>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Add 8 more items with appropriate classes -->
+                <!-- Example Photography Item -->
+                <div class="gallery-item photography clickable-item" data-category="photography">
+                  <img src="freepik__upload__27195.jpeg" alt="Nature Photo" class="gallery-img">
+                  <div class="gallery-overlay">
+                    <div class="overlay-content">
+                      <h3>Forest Landscape</h3>
+                      <p>Nature Series</p>
+                      <i class="fas fa-expand zoom-icon"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Lightbox -->
+            <div class="lightbox">
+              <span class="close-btn">&times;</span>
+              <img class="lightbox-img" src="" alt="">
+              <div class="lightbox-caption"></div>
+              <a class="prev-btn">&#10094;</a>
+              <a class="next-btn">&#10095;</a>
+            </div>
+          </section>
+          <section id="cta" class="cta-section">
+            <div class="container">
+              <div class="cta-content">
+                <h2>Ready to Bring Your Vision to Life?</h2>
+                <p>Let's collaborate on your next project. I'm available for freelance work and exciting opportunities.</p>
+                <div class="cta-buttons">
+                  <a href="#contact" class="btn btn-primary">Hire Me</a>
+                  <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="contact-section">
+            <div class="container">
+              <h2 class="section-title">Get In Touch</h2>
+              <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
+              
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" required>
+                  <label for="name">Your Name</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required>
+                  <label for="email">Email Address</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone">
+                  <label for="phone">Phone Number (Optional)</label>
+                </div>
+                
+                <div class="form-group textarea-group">
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">
+                  <span>Send Message</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </section>
+          <section id="projects" class="projects-section">
+            <div class="container">
+              <h2 class="section-title">My Live Projects</h2>
+              <p class="section-subtitle">Click to visit my published work</p>
+              
+              <div class="projects-slider">
+                <!-- Project 1 -->
+                <div class="project-slide">
+                  <div class="project-image">
+                    <img src="2025-04-03_12-59.png" alt="E-commerce Website">
+                    <div class="project-overlay">
+                      <a href="https://www.drpaulsdentalclinic.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3>E-commerce Store</h3>
+                    <p>Built with React, Node.js, and MongoDB</p>
+                    <a href="https://www.drpaulsdentalclinic.com/" target="_blank" class="btn btn-small">View Project</a>
+                  </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-slide">
+                  <div class="project-image">
+                    <img src="sm-home-2048x1365.webp" alt="Portfolio Template">
+                    <div class="project-overlay">
+                      <a href="https://sudhamurty.in/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3>Portfolio Template</h3>
+                    <p>HTML, CSS, and JavaScript</p>
+                    <a href="https://sudhamurty.in/" target="_blank" class="btn btn-small">View Project</a>
+                  </div>
+                </div>
+                <div class="project-slide">
+                    <div class="project-image">
+                      <img src="2025-04-03_12-59_1.png" alt="Portfolio Template">
+                      <div class="project-overlay">
+                        <a href="https://inframat.in/" target="_blank" class="project-link">
+                          <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                      </div>
+                    </div>
+                    <div class="project-info">
+                      <h3>Portfolio Template</h3>
+                      <p>HTML, CSS, and JavaScript</p>
+                      <a href="https://inframat.in/" target="_blank" class="btn btn-small">View Project</a>
+                    </div>
+                  </div>
+                  <div class="project-slide">
+                    <div class="project-image">
+                      <img src="2025-04-03_12-59.png" alt="E-commerce Website">
+                      <div class="project-overlay">
+                        <a href="https://www.drpaulsdentalclinic.com/" target="_blank" class="project-link">
+                          <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                      </div>
+                    </div>
+                    <div class="project-info">
+                      <h3>E-commerce Store</h3>
+                      <p>Built with React, Node.js, and MongoDB</p>
+                      <a href="https://www.drpaulsdentalclinic.com/" target="_blank" class="btn btn-small">View Project</a>
+                    </div>
+                  </div>
+                  
+                  <!-- Project 2 -->
+                  <div class="project-slide">
+                    <div class="project-image">
+                      <img src="sm-home-2048x1365.webp" alt="Portfolio Template">
+                      <div class="project-overlay">
+                        <a href="https://sudhamurty.in/" target="_blank" class="project-link">
+                          <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                      </div>
+                    </div>
+                    <div class="project-info">
+                      <h3>Portfolio Template</h3>
+                      <p>HTML, CSS, and JavaScript</p>
+                      <a href="https://sudhamurty.in/" target="_blank" class="btn btn-small">View Project</a>
+                    </div>
+                  </div>
+                  <div class="project-slide">
+                      <div class="project-image">
+                        <img src="2025-04-03_12-59_1.png" alt="Portfolio Template">
+                        <div class="project-overlay">
+                          <a href="https://inframat.in/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                          </a>
+                        </div>
+                      </div>
+                      <div class="project-info">
+                        <h3>Portfolio Template</h3>
+                        <p>HTML, CSS, and JavaScript</p>
+                        <a href="https://inframat.in/" target="_blank" class="btn btn-small">View Project</a>
+                      </div>
+                    </div>
+                <!-- Add 3-5 more project slides -->
+              </div>
+              
+              <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+          </section>
+
+
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Me</h3>
+                    <p>I’m a Front-End Developer skilled in HTML, CSS, JavaScript, React, creating responsive, user-friendly website with a focus on UI/UX and performance.</p>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i> +123 456 7890</span>
+                        <span><i class="fas fa-envelope"></i> email@example.com</span>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#skills">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#projects">My Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navList.classList.toggle('active');
+        
+        // Toggle body scroll when menu is open
+        if (navList.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navList.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+    
+    // Change header background on scroll
+   
+});
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const fullName = "Anirudh"; // REPLACE WITH YOUR NAME
+    const typingElement = document.querySelector('.typing-animation');
+    const cursorElement = document.createElement('span');
+    cursorElement.className = 'cursor';
+    typingElement.appendChild(cursorElement);
+
+    // Count only letters (ignore spaces, punctuation)
+    function countLetters(str) {
+        return str.replace(/[^a-zA-Z]/g, '').length;
+    }
+
+    const letterCount = countLetters(fullName);
+    const typingSpeed = 120; // ms per LETTER (spaces are instant)
+    const pauseAtEnd = 1500; // ms to pause after typing
+    const eraseSpeed = 60; // ms per character during erase
+
+    function startTyping() {
+        let i = 0;
+        cursorElement.style.opacity = '1';
+        
+        function typeCharacter() {
+            if (i < fullName.length) {
+                typingElement.textContent = fullName.substring(0, i+1);
+                typingElement.appendChild(cursorElement);
+                i++;
+                
+                // Instant display for spaces, normal speed for letters
+                const delay = fullName[i-1] === ' ' ? 0 : typingSpeed;
+                setTimeout(typeCharacter, delay);
+            } else {
+                setTimeout(startErasing, pauseAtEnd);
+            }
+        }
+        
+        typeCharacter();
+    }
+
+    function startErasing() {
+        let i = fullName.length;
+        
+        function eraseCharacter() {
+            if (i > 0) {
+                typingElement.textContent = fullName.substring(0, i-1);
+                typingElement.appendChild(cursorElement);
+                i--;
+                setTimeout(eraseCharacter, eraseSpeed);
+            } else {
+                cursorElement.style.opacity = '0';
+                setTimeout(startTyping, 500); // Delay before restart
+            }
+        }
+        
+        eraseCharacter();
+    }
+
+    // Initial delay before first animation
+    setTimeout(startTyping, 800);
+});
+
+// Add this to your script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all filter buttons and gallery items
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Add click event listener to each filter button
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Get the filter value from data-filter attribute
+            const filterValue = this.getAttribute('data-filter');
+
+            // Show/hide gallery items based on filter
+            galleryItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+// Form Submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(this);
+  const submitBtn = document.querySelector('.submit-btn');
+  
+  // Change button state
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  submitBtn.disabled = true;
+  
+  // Simulate form submission (replace with actual AJAX call)
+  setTimeout(() => {
+    // This would be your fetch/AJAX call to a server
+    console.log('Form data:', Object.fromEntries(formData));
+    
+    // Show success message
+    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+    
+    // Reset form after 2 seconds
+    setTimeout(() => {
+      this.reset();
+      submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+      submitBtn.disabled = false;
+      
+      // Show thank you message (optional)
+      alert('Thank you for your message! I will get back to you soon.');
+    }, 2000);
+  }, 1500);
+});
+
+// Back to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTopBtn = document.querySelector('.back-to-top');
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  });
+  
+  backToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+// Projects Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.projects-slider');
+  const slides = document.querySelectorAll('.project-slide');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  const dotsContainer = document.querySelector('.slider-dots');
+  
+  let currentIndex = 0;
+  let autoScrollInterval;
+  const autoScrollDelay = 3000; // 3 seconds between slides
+
+  // Create dots
+  function createDots() {
+    dotsContainer.innerHTML = ''; // Clear existing dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('slider-dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetAutoScroll(); // Reset timer on manual navigation
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // Navigation functions
+  function goToSlide(index) {
+    currentIndex = index;
+    slider.scrollTo({
+      left: slides[index].offsetLeft,
+      behavior: 'smooth'
+    });
+    updateActiveDot();
+  }
+
+  function updateActiveDot() {
+    document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  // Auto-scroll functionality
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      goToSlide(currentIndex);
+    }, autoScrollDelay);
+  }
+
+  function resetAutoScroll() {
+    clearInterval(autoScrollInterval);
+    startAutoScroll();
+  }
+
+  // Button events
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    goToSlide(currentIndex);
+    resetAutoScroll();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+    resetAutoScroll();
+  });
+
+  // Initialize
+  createDots();
+  startAutoScroll();
+
+  // Pause auto-scroll on hover
+  slider.addEventListener('mouseenter', () => {
+    clearInterval(autoScrollInterval);
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    startAutoScroll();
+  });
+
+  // Update dots on scroll
+  slider.addEventListener('scroll', () => {
+    const slideWidth = slides[0].offsetWidth;
+    const newIndex = Math.round(slider.scrollLeft / slideWidth);
+    if (newIndex !== currentIndex) {
+      currentIndex = newIndex;
+      updateActiveDot();
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    goToSlide(currentIndex); // Re-center current slide
+  });
+});
+    </script>
+</body>
+</html>
