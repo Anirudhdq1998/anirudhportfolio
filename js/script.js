@@ -270,3 +270,67 @@ document.addEventListener("DOMContentLoaded", function () {
     goToSlide(currentIndex); // Re-center current slide
   });
 });
+// Parallax Effect for Hero Section
+function initParallax() {
+  const parallaxBg = document.querySelector(".hero-parallax-bg");
+  const heroImage = document.querySelector(".hero-image");
+
+  if (parallaxBg && heroImage) {
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.pageYOffset;
+      parallaxBg.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+      heroImage.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+    });
+  }
+}
+
+// Call this in your DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", function () {
+  initParallax();
+  // Your other initialization code...
+});
+// In your script.js
+document.addEventListener("DOMContentLoaded", function () {
+  // Scroll Animations
+  const scrollElements = document.querySelectorAll("[data-scroll]");
+
+  const elementInView = (el) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return elementTop <= window.innerHeight * 0.8;
+  };
+
+  const displayScrollElement = (element) => {
+    element.classList.add("is-visible");
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el)) {
+        displayScrollElement(el);
+      }
+    });
+  };
+
+  // Initialize
+  window.addEventListener("load", handleScrollAnimation);
+  window.addEventListener("scroll", handleScrollAnimation);
+
+  // Typing Animation
+  const typingElement = document.querySelector(".typing-animation");
+  if (typingElement) {
+    const text = typingElement.textContent;
+    typingElement.textContent = "";
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        typingElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 120);
+      }
+    }
+    setTimeout(typeWriter, 800);
+  }
+
+  // Your other existing code...
+});

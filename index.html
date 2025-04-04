@@ -40,22 +40,35 @@
 
     <main>
         
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h4>Hello, I'm</h4>
-                        <h1 class="typing-animation">Anirudh</h1>
-                        <h3>Front-End Developer</h3>
-                        <p>I’m a Front-End Developer skilled in HTML, CSS, JavaScript, React, creating responsive, user-friendly website  with a focus on UI/UX and performance.</p>
-                        <a href="#contact" class="btn">Contact Me</a>
-                    </div>
-                    <div class="hero-image">
-                        <img src="assects/dq2.jpg" alt="Your Name - Profession" class="profile-img">
-                    </div>
-                </div>
+      <section id="home" class="hero">
+        <div class="hero-parallax-bg"></div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h4 data-scroll="fade-up" class="delay-1">Hello, I'm</h4>
+              <h1 class="typing-animation" data-scroll="fade-up" class="delay-2">Anirudh</h1>
+              <h3 data-scroll="fade-up" class="delay-3">Front-End Developer</h3>
+              <p data-scroll="fade-up" class="delay-4">I'm a Front-End Developer skilled in HTML, CSS, JavaScript, React, creating responsive, user-friendly websites with a focus on UI/UX and performance.</p>
+              <div data-scroll="fade-up" class="delay-5">
+                <a href="#contact" class="btn">Contact Me</a>
+     
+                <a href="#work" class="btn btn-outline">View My Work</a>
+              </div>
             </div>
-        </section>
+            <div class="hero-image" data-scroll="zoom" class="delay-3">
+              <img src="assects/dq2.jpg" alt="Anirudh - Front-End Developer" class="profile-img">
+              <div class="hero-image-border"></div>
+              <div class="hero-image-dots"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator">
+          <span>Scroll Down</span>
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </div>
+      </section>
         <section id="skills" class="slide-left">
             <div class="container">
               <h2 class="section-title">My Skills</h2>
@@ -159,40 +172,6 @@
                   <a href="#portfolio" class="btn btn-secondary">View My Work</a>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section id="contact" class="contact-section">
-            <div class="container">
-              <h2 class="section-title">Get In Touch</h2>
-              <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
-              
-              <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                  <input type="text" id="name" name="name" required>
-                  <label for="name">Your Name</label>
-                </div>
-                
-                <div class="form-group">
-                  <input type="email" id="email" name="email" required>
-                  <label for="email">Email Address</label>
-                </div>
-                
-                <div class="form-group">
-                  <input type="tel" id="phone" name="phone">
-                  <label for="phone">Phone Number (Optional)</label>
-                </div>
-                
-                <div class="form-group textarea-group">
-                  <textarea id="message" name="message" rows="5" required></textarea>
-                  <label for="message">Your Message</label>
-                </div>
-                
-                <button type="submit" class="btn submit-btn">
-                  <span>Send Message</span>
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </form>
             </div>
           </section>
           <section id="projects" class="projects-section">
@@ -306,6 +285,40 @@
               </div>
             </div>
           </section>
+          <section id="contact" class="contact-section">
+            <div class="container">
+              <h2 class="section-title">Get In Touch</h2>
+              <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
+              
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" required>
+                  <label for="name">Your Name</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required>
+                  <label for="email">Email Address</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone">
+                  <label for="phone">Phone Number (Optional)</label>
+                </div>
+                
+                <div class="form-group textarea-group">
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">
+                  <span>Send Message</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </section>
+ 
 
 
 <!-- Back to Top Button -->
