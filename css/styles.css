@@ -307,7 +307,176 @@ ul {
   border-radius: 2px;
   animation: scrollWheel 2s infinite;
 }
+/* Resume Section */
+.resume-section {
+  padding: 100px 0;
+  background: #f9f9f9;
+}
 
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.resume-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.resume-download {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.resume-download i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.resume-download h3 {
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.resume-download p {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+/* Skills Visualization */
+.skills-visualization {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.skill-bars {
+  margin-top: 30px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.skill-bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 5px;
+  width: 0;
+  transition: width 1.5s ease-out;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.timeline {
+  position: relative;
+  margin-top: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 40px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.timeline-content {
+  background: #f5f9ff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.timeline-content h4 {
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.timeline-content h5 {
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+}
+
+.timeline-content li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-card,
+  .skills-visualization,
+  .experience-timeline {
+    padding: 30px;
+  }
+
+  .timeline-item {
+    padding-left: 70px;
+  }
+}
 @keyframes scrollWheel {
   0% {
     top: 5px;

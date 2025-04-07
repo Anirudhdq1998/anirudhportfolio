@@ -334,3 +334,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Your other existing code...
 });
+// Animate skill bars when section comes into view
+function animateSkillBars() {
+  const skillBars = document.querySelectorAll(".skill-level");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const level = entry.target.getAttribute("data-level");
+          entry.target.style.width = level;
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  skillBars.forEach((bar) => observer.observe(bar));
+}
+
+// Call this in your DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", function () {
+  animateSkillBars();
+  // Your other existing JavaScript...
+});
