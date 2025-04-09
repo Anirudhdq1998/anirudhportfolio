@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Add this to your existing JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-  const fullName = "Anirudh"; // REPLACE WITH YOUR NAME
+  const fullName = "Anirudh";
   const typingElement = document.querySelector(".typing-animation");
   const cursorElement = document.createElement("span");
   cursorElement.className = "cursor";
