@@ -468,6 +468,32 @@ ul {
   color: var(--primary-color);
   font-weight: 600;
 }
+/* Active menu item styling */
+.nav-list li a.active {
+  color: var(--primary-color); /* Change to your theme color */
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-list li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color); /* Same as text color */
+  animation: underline 0.3s ease;
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 /* Responsive Design */
 @media (max-width: 992px) {
   .resume-container {

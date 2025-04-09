@@ -358,3 +358,38 @@ document.addEventListener("DOMContentLoaded", function () {
   animateSkillBars();
   // Your other existing JavaScript...
 });
+// Highlight active menu item based on scroll position
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navItems = document.querySelectorAll(".nav-list li a");
+
+  window.addEventListener("scroll", function () {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (pageYOffset >= sectionTop - 300) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navItems.forEach((item) => {
+      item.classList.remove("active");
+      if (item.getAttribute("href") === `#${current}`) {
+        item.classList.add("active");
+      }
+    });
+  });
+});
+
+document.querySelectorAll(".nav-list li a").forEach((item) => {
+  item.addEventListener("click", function () {
+    if (window.innerWidth <= 768) {
+      // Match your mobile breakpoint
+      document.querySelector(".hamburger").classList.remove("active");
+      document.querySelector(".nav-list").classList.remove("active");
+    }
+  });
+});
