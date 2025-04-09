@@ -32,21 +32,31 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const fullName = "Anirudh";
   const typingElement = document.querySelector(".typing-animation");
+
+  // Clear any existing content and cursor
+  typingElement.innerHTML = "";
+
+  // Create cursor element only once
   const cursorElement = document.createElement("span");
   cursorElement.className = "cursor";
   typingElement.appendChild(cursorElement);
 
-  // Count only letters (ignore spaces, punctuation)
+  // Track if animation is running to prevent duplicates
+  let isAnimating = false;
+
   function countLetters(str) {
     return str.replace(/[^a-zA-Z]/g, "").length;
   }
 
   const letterCount = countLetters(fullName);
-  const typingSpeed = 120; // ms per LETTER (spaces are instant)
-  const pauseAtEnd = 1500; // ms to pause after typing
-  const eraseSpeed = 60; // ms per character during erase
+  const typingSpeed = 120;
+  const pauseAtEnd = 1500;
+  const eraseSpeed = 60;
 
   function startTyping() {
+    if (isAnimating) return;
+    isAnimating = true;
+
     let i = 0;
     cursorElement.style.opacity = "1";
 
@@ -56,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         typingElement.appendChild(cursorElement);
         i++;
 
-        // Instant display for spaces, normal speed for letters
         const delay = fullName[i - 1] === " " ? 0 : typingSpeed;
         setTimeout(typeCharacter, delay);
       } else {
@@ -78,15 +87,28 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(eraseCharacter, eraseSpeed);
       } else {
         cursorElement.style.opacity = "0";
-        setTimeout(startTyping, 500); // Delay before restart
+        isAnimating = false;
+        setTimeout(startTyping, 500);
       }
     }
 
     eraseCharacter();
   }
 
-  // Initial delay before first animation
-  setTimeout(startTyping, 800);
+  // Clear any timeouts on page reload
+  let animationTimeout;
+  const startAnimation = () => {
+    clearTimeout(animationTimeout);
+    animationTimeout = setTimeout(startTyping, 800);
+  };
+
+  startAnimation();
+
+  // Clean up on page unload to prevent memory leaks
+  window.addEventListener("beforeunload", () => {
+    clearTimeout(animationTimeout);
+    isAnimating = false;
+  });
 });
 
 // Add this to your script.js
