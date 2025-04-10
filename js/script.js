@@ -415,3 +415,81 @@ document.querySelectorAll(".nav-list li a").forEach((item) => {
     }
   });
 });
+// Scroll Animation System
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all elements with data-scroll attribute
+  const scrollElements = document.querySelectorAll("[data-scroll]");
+
+  // Define animation options
+  const options = {
+    threshold: 0.2, // 20% of the element must be visible
+    rootMargin: "0px 0px -50px 0px", // Adjusts the trigger point (negative means earlier trigger)
+  };
+
+  // Create the intersection observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Get the animation type from data-scroll attribute
+        const animationType = entry.target.getAttribute("data-scroll");
+
+        // Add the animation class
+        entry.target.classList.add("animate", animationType);
+
+        // Stop observing after animation is triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  // Add all elements to the observer
+  scrollElements.forEach((el) => {
+    observer.observe(el);
+
+    // Set initial state - hidden
+    el.classList.add("hidden");
+
+    // Handle delay if specified
+    if (el.classList.contains("delay-1")) el.style.animationDelay = "0.1s";
+    if (el.classList.contains("delay-2")) el.style.animationDelay = "0.2s";
+    if (el.classList.contains("delay-3")) el.style.animationDelay = "0.3s";
+    if (el.classList.contains("delay-4")) el.style.animationDelay = "0.4s";
+    if (el.classList.contains("delay-5")) el.style.animationDelay = "0.5s";
+  });
+
+  // Add scroll animations to sections
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section, index) => {
+    // Skip sections that already have animations
+    if (section.hasAttribute("data-scroll")) return;
+
+    // Alternate between fade-left and fade-right for sections
+    const animation = index % 2 === 0 ? "fade-right" : "fade-left";
+    section.setAttribute("data-scroll", animation);
+    observer.observe(section);
+    section.classList.add("hidden");
+  });
+});
+// Update the observer to handle data-delay attributes
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Get the animation type from data-scroll attribute
+      const animationType = entry.target.getAttribute("data-scroll");
+
+      // Add the animation class
+      entry.target.classList.add("animate", animationType);
+
+      // Apply custom delay if specified
+      const delay = entry.target.getAttribute("data-delay");
+      if (delay) {
+        entry.target.style.transitionDelay = delay;
+      }
+
+      // Stop observing after animation is triggered
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+// style.css end

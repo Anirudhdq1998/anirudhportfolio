@@ -493,6 +493,78 @@ ul {
   color: var(--primary-color);
   padding-left: 5px;
 }
+/* Scroll Animation Styles */
+.hidden {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.animate {
+  opacity: 1;
+}
+
+/* Animation types */
+.fade-up {
+  transform: translateY(40px);
+}
+
+.fade-up.animate {
+  transform: translateY(0);
+}
+
+.fade-down {
+  transform: translateY(-40px);
+}
+
+.fade-down.animate {
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+
+.fade-left.animate {
+  transform: translateX(0);
+}
+
+.fade-right {
+  transform: translateX(40px);
+}
+
+.fade-right.animate {
+  transform: translateX(0);
+}
+
+.zoom {
+  transform: scale(0.9);
+}
+
+.zoom.animate {
+  transform: scale(1);
+}
+
+/* Delay classes for cascading effects */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.2s;
+}
+.delay-3 {
+  animation-delay: 0.3s;
+}
+.delay-4 {
+  animation-delay: 0.4s;
+}
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* Add a smoother transition for all sections */
+section {
+  transition: all 0.8s ease-in-out;
+}
 @keyframes underline {
   from {
     width: 0;
