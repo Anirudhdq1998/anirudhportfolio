@@ -492,25 +492,25 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, options);
 
-// style.css end
-// Add this script for scroll-triggered animations
-// document.addEventListener("DOMContentLoaded", function () {
-//   const skillCards = document.querySelectorAll(".skill-card");
+style.css end
+Add this script for scroll-triggered animations
+document.addEventListener("DOMContentLoaded", function () {
+  const skillCards = document.querySelectorAll(".skill-card");
 
-//   function checkScroll() {
-//     skillCards.forEach((card) => {
-//       const cardTop = card.getBoundingClientRect().top;
-//       const windowHeight = window.innerHeight;
+  function checkScroll() {
+    skillCards.forEach((card) => {
+      const cardTop = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-//       if (cardTop < windowHeight - 100) {
-//         card.classList.add("animate");
-//       }
-//     });
-//   }
+      if (cardTop < windowHeight - 100) {
+        card.classList.add("animate");
+      }
+    });
+  }
 
-//   // Initial check
-//   checkScroll();
+  // Initial check
+  checkScroll();
 
-//   // Check on scroll
-//   window.addEventListener("scroll", checkScroll);
-// });
+  // Check on scroll
+  window.addEventListener("scroll", checkScroll);
+});
