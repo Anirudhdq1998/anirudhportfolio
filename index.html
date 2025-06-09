@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.0/photoswipe.min.css">
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Portfolio</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#skills">About</a></li>
+                    <li><a href="#resume">My Resume</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+      <section id="home" class="hero">
+        <div class="hero-parallax-bg"></div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h4 data-scroll="fade-up" class="delay-1">Hello, I'm</h4>
+              <h1 class="typing-animation" data-scroll="fade-up" class="delay-2">Anirudh</h1>
+              <h3 data-scroll="fade-up" class="delay-3">Front-End Developer</h3>
+              <p data-scroll="fade-up" class="delay-4">I'm a Front-End Developer skilled in HTML, CSS, JavaScript, React, creating responsive, user-friendly websites with a focus on UI/UX and performance.</p>
+              <div data-scroll="fade-up" class="delay-5">
+                <a href="#contact" class="btn">Contact Me</a>
+     
+                <a href="#projects" class="btn btn-outline">View My Work</a>
+              </div>
+            </div>
+            <div class="hero-image" data-scroll="zoom" class="delay-3">
+              <img src="assects/dq2.jpg" alt="Anirudh - Front-End Developer" class="profile-img">
+              <div class="hero-image-border"></div>
+              <div class="hero-image-dots"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator">
+          <span>Scroll Down</span>
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </div>
+      </section>
+        <section id="skills" class="slide-left">
+            <div class="container">
+              <h2 class="section-title"><span>My</span> Skills</h2>
+              <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                  <img src="assects/Figmaandcava.png" alt="Design" class="skill-icon">
+                  <h3>Design Skills: Figma & Canva</h3>
+                  <p>Skilled in editing and designing with Figma and Canva—great for collaborating with designers and creating UI/UX assets.</p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                  <img src="assects/Web Development .png" alt="Development" class="skill-icon">
+                  <h3>Web Development</h3>
+                  <p>Building responsive websites using HTML, CSS, and JavaScript with modern frameworks.</p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                  <img src="assects/Basic SEO.png" alt="Mobile" class="skill-icon">
+                  <h3>Basic SEO</h3>
+                  <p>Improves visibility on search engines. Use semantic HTML, alt tags, and proper structure to help users find your content.</p>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                  <img src="assects/Basic Web Performance Optimization.png" alt="SEO" class="skill-icon">
+                  <h3>Basic Web Performance Optimization</h3>
+                  <p>Boosts site speed for better SEO and user experience. Use lazy loading, compress images, and remove unused scripts.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="resume" class="resume-section">
+            <div class="container">
+              <h2 class="section-title"><span>My</span> Resume</h2>
+              <p class="section-subtitle">My professional journey and skills</p>
+              
+              <div class="resume-container">
+                <!-- Resume Download Card -->
+                <div class="resume-card" data-scroll="fade-right">
+                  <div class="resume-download">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Download My Full Resume</h3>
+                    <p>Get a comprehensive overview of my experience, education, and skills in PDF format.</p>
+                    <a href="path/to/your-resume.pdf" class="btn" download="Anirudh-FrontEnd-Developer-Resume.pdf">
+                      <i class="fas fa-download"></i> Download PDF
+                    </a>
+                  </div>
+                </div>
+                
+                <!-- Skills Visualization -->
+                <div class="skills-visualization" data-scroll="fade-left">
+                  <h3>Technical Skills</h3>
+                  <div class="skill-bars">
+                    <div class="skill">
+                      <span class="skill-name">HTML/CSS</span>
+                      <div class="skill-bar">
+                        <div class="skill-level" data-level="95%"></div>
+                      </div>
+                    </div>
+                    <div class="skill">
+                      <span class="skill-name">JavaScript</span>
+                      <div class="skill-bar">
+                        <div class="skill-level" data-level="90%"></div>
+                      </div>
+                    </div>
+                    <div class="skill">
+                      <span class="skill-name">React</span>
+                      <div class="skill-bar">
+                        <div class="skill-level" data-level="85%"></div>
+                      </div>
+                    </div>
+                    <div class="skill">
+                      <span class="skill-name">UI/UX Design</span>
+                      <div class="skill-bar">
+                        <div class="skill-level" data-level="80%"></div>
+                      </div>
+                    </div>
+                    <div class="skill">
+                      <span class="skill-name">Node.js</span>
+                      <div class="skill-bar">
+                        <div class="skill-level" data-level="75%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Experience Timeline -->
+              <div class="experience-timeline" data-scroll="fade-up">
+                <h3>Professional Experience</h3>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-content">
+                      <h4>Wordpress Developer - Front-end
+                      </h4>
+                      <h5>Midnay Tech Private Limited</h5>
+                      <ul>
+                        <li>esigned and developed responsive and user-friendly websites using
+                          HTML5, CSS3, and JavaScript.</li>
+                        <li>Improved website performance by 40% through optimization</li>
+                        <li>Collaborated with UX team to implement design systems</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2025</div>
+                    <div class="timeline-content">
+                      <h4>Senior Web Developer</h4>
+                      <h5>Digital Creative Agency</h5>
+                      <ul>
+                        <li>Built and maintained client websites using HTML/CSS/JS</li>
+                        <li>Implemented mobile-first responsive designs</li>
+                        <li>Assisted in developing WordPress themes</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Add this as your gallery section -->
+          <section id="gallery" class="gallery-section">
+            <div class="container">
+              <h2 class="section-title"><span>My</span> Gallery</h2>
+              <div class="gallery-filter">
+                  <button class="filter-btn active" data-filter="all">All</button>
+                  <button class="filter-btn" data-filter="design">Design</button>
+                  <button class="filter-btn" data-filter="art">Art</button>
+                  <button class="filter-btn" data-filter="photography">Photography</button>
+              </div>
+              
+              <div class="gallery-grid">
+                <!-- Design Items (static) -->
+                <div class="gallery-item design static-item" data-category="design">
+                  <img src="assects/freepik__upload__2178.jpeg" alt="Design Project 1" class="gallery-img">
+                  <div class="gallery-overlay">
+                    <div class="overlay-content">
+                      <h3>UI Design</h3>
+                      <p>Skilled in editing and designing with Figma and Canva—great for collaborating with designers and creating UI/UX assets.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Art Items (clickable) -->
+                <div class="gallery-item art clickable-item" data-category="art">
+                  <img src="assects/freepik__upload__27195.jpeg" alt="Digital Painting 1" class="gallery-img">
+                  <div class="gallery-overlay">
+                    <div class="overlay-content">
+                      <h3>Digital Painting</h3>
+                      <p>2023 Collection</p>
+                      <i class="fas fa-expand zoom-icon"></i>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Add 8 more items with appropriate classes -->
+                <!-- Example Photography Item -->
+                <div class="gallery-item photography clickable-item" data-category="photography">
+                  <img src="assects/freepik__upload__2178.jpeg" alt="Nature Photo" class="gallery-img">
+                  <div class="gallery-overlay">
+                    <div class="overlay-content">
+                      <h3>Forest Landscape</h3>
+                      <p>Nature Series</p>
+                      <i class="fas fa-expand zoom-icon"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Lightbox -->
+            <div class="lightbox">
+              <span class="close-btn">&times;</span>
+              <img class="lightbox-img" src="" alt="">
+              <div class="lightbox-caption"></div>
+              <a class="prev-btn">&#10094;</a>
+              <a class="next-btn">&#10095;</a>
+            </div>
+          </section>
+          <section id="cta" class="cta-section">
+            <div class="container">
+              <div class="cta-content">
+                <h2>Ready to Bring Your Vision to Life?</h2>
+                <p>Let's collaborate on your next project. I'm available for freelance work and exciting opportunities.</p>
+                <div class="cta-buttons">
+                  <a href="#resume" class="btn btn-primary">Hire Me</a>
+                  <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <section id="projects" class="projects-section">
+            <div class="container">
+              <h2 class="section-title"><span>My</span> Live Projects</h2>
+              <p class="section-subtitle">Click to visit my published work</p>
+              
+              <div class="projects-slider">
+                <!-- Project 1 -->
+                <div class="project-slide">
+                  <div class="project-image">
+                    <img src="assects/drpauls.png" alt="E-commerce Website">
+                    <div class="project-overlay">
+                      <a href="https://www.drpaulsdentalclinic.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3>Drpauls dental Clinic</h3>
+                    <p>Built with React, Node.js, and MongoDB,woocomerce</p>
+                    <a href="https://www.drpaulsdentalclinic.com/" target="_blank" class="btn btn-small">View Project</a>
+                  </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-slide">
+                  <div class="project-image">
+                    <img src="assects/sm-home-2048x1365.webp" alt="Portfolio Template">
+                    <div class="project-overlay">
+                      <a href="https://sudhamurty.in/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Site
+                      </a>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3>Sudhamurty Personal</h3>
+                    <p>HTML, CSS, and JavaScript</p>
+                    <a href="https://sudhamurty.in/" target="_blank" class="btn btn-small">View Project</a>
+                  </div>
+                </div>
+                <div class="project-slide">
+                    <div class="project-image">
+                      <img src="assects/inframte.png" alt="Portfolio Template">
+                      <div class="project-overlay">
+                        <a href="https://inframat.in/" target="_blank" class="project-link">
+                          <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                      </div>
+                    </div>
+                    <div class="project-info">
+                      <h3>Steel Products</h3>
+                      <p>HTML, CSS, and JavaScript</p>
+                      <a href="https://inframat.in/" target="_blank" class="btn btn-small">View Project</a>
+                    </div>
+                  </div>
+          
+                  
+                  <!-- Project 2 -->
+                  <div class="project-slide">
+                    <div class="project-image">
+                      <img src="assects/slidkit.png" alt="Portfolio Template">
+                      <div class="project-overlay">
+                        <a href="https://www.slidekit.com/" target="_blank" class="project-link">
+                          <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                      </div>
+                    </div>
+                    <div class="project-info">
+                      <h3>Google slider</h3>
+                      <p>HTML, CSS, and JavaScript</p>
+                      <a href="https://www.slidekit.com/" target="_blank" class="btn btn-small">View Project</a>
+                    </div>
+                  </div>
+             
+                        <div class="project-slide">
+                      <div class="project-image">
+                        <img src="assects/academy.png" alt="Portfolio Template">
+                        <div class="project-overlay">
+                          <a href="https://academy.taxscan.in/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                          </a>
+                        </div>
+                      </div>
+                      <div class="project-info">
+                        <h3>Taxscan</h3>
+                        <p>HTML, CSS, and JavaScript</p>
+                        <a href="https://academy.taxscan.in/" target="_blank" class="btn btn-small">View Project</a>
+                      </div>
+                    </div>
+                <!-- Add 3-5 more project slides -->
+              </div>
+              
+              <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+          </section>
+          <section id="contact" class="contact-section">
+            <div class="container">
+              <h2 class="section-title">Get In Touch</h2>
+              <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
+              
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" required>
+                  <label for="name">Your Name</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required>
+                  <label for="email">Email Address</label>
+                </div>
+                
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone">
+                  <label for="phone">Phone Number (Optional)</label>
+                </div>
+                
+                <div class="form-group textarea-group">
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">
+                  <span>Send Message</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </section>
+ 
+
+
+<!-- Back to Top Button -->
+<button class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Me</h3>
+                    <p>I’m a Front-End Developer skilled in HTML, CSS, JavaScript, React, creating responsive, user-friendly website with a focus on UI/UX and performance.</p>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i> <a href="tel:8943331382">+91 8943331382</a></span>
+                        <span><i class="fas fa-envelope"></i> <a href="mailto:Anirudh.dq.p@gmail.com">Anirudh.dq.p@gmail.com</a></span>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#skills">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#projects">My Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anirudh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/script.js"> </script>
+
+</body>
+</html>
