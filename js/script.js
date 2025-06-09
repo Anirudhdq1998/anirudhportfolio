@@ -359,3 +359,4 @@ document.addEventListener("DOMContentLoaded", function () {
   initScrollAnimations();
   initActiveMenuHighlight();
 });
+alert("JS is working!");
