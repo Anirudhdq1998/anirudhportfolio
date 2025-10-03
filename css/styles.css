@@ -1719,4 +1719,7 @@ section {
   .hero {
     padding: 250px 0;
   }
+  .btn{
+    margin-bottom: unset;
+  }
 }
