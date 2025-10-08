@@ -1684,7 +1684,7 @@ section {
   .nav-list {
     position: fixed;
     left: -100%;
-    top: 80px;
+    top: 78px;
     flex-direction: column;
     background-color: var(--white);
     width: 100%;
