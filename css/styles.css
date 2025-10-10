@@ -441,6 +441,7 @@ ul {
 .timeline-content {
   background: #f5f9ff;
   padding: 25px;
+  padding-top: 40px;
   border-radius: 10px;
   border-left: 3px solid var(--primary-color);
 }
@@ -457,7 +458,7 @@ ul {
 }
 
 .timeline-content ul {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .timeline-content li {
@@ -1709,7 +1710,7 @@ section {
 @media (min-width: 992px) {
   .skill-icon {
     height: 150px;
-  }
+  } 
   #skills {
     padding-top: 100px;
   }
@@ -1722,4 +1723,8 @@ section {
   .btn{
     margin-bottom: unset;
   }
+
+.timeline-content ul {
+  padding-left: 20px;
+}
 }

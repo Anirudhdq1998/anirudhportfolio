@@ -132,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-
   // Form Submission
   function initContactForm() {
     const form = document.getElementById("contactForm");
