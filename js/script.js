@@ -137,29 +137,50 @@ document.addEventListener("DOMContentLoaded", function () {
   function initContactForm() {
     const form = document.getElementById("contactForm");
     if (!form) return;
-
+  
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const formData = new FormData(this);
       const submitBtn = document.querySelector(".submit-btn");
-
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  
+      // Get form values
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const message = formData.get('message');
+  
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening email...';
       submitBtn.disabled = true;
-
+  
       setTimeout(() => {
-        console.log("Form data:", Object.fromEntries(formData));
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-
+        // Create email body with all details
+        let emailBody = `Name: ${name}%0D%0A`;
+        emailBody += `Email: ${email}%0D%0A`;
+        if (phone) {
+          emailBody += `Phone: ${phone}%0D%0A`;
+        }
+        emailBody += `%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+  
+        // Create mailto link
+        const subject = `Contact Form Submission from ${name}`;
+        const mailtoLink = `mailto:Anirudh.dq.p@gmail.com?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
+  
+        // Open email client
+        window.location.href = mailtoLink;
+  
         setTimeout(() => {
           this.reset();
           submitBtn.innerHTML =
             '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
           submitBtn.disabled = false;
-          alert("Thank you for your message! I will get back to you soon.");
-        }, 2000);
-      }, 1500);
+          alert("Your email client should open now. Please send the email to complete your message.");
+        }, 1000);
+      }, 500);
     });
   }
+  
+  // Initialize the form when the page loads
+  initContactForm();
 
   // Back to Top Button
   function initBackToTop() {
