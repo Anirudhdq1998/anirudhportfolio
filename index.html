@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anirudh P - Full Stack Web Developer Portfolio</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-mode">
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">AP</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button class="theme-toggle" onclick="toggleTheme()">Light</button>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+            <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+            <li><a href="#education" onclick="closeMobileMenu()">Education</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social">
+        <a href="https://www.linkedin.com/in/anirudh-p-624503273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="floating-social-link linkedin" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            <span class="tooltip">LinkedIn</span>
+        </a>
+        
+        <a href="https://github.com/Anirudhdq1998" target="_blank" class="floating-social-link github" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+            </svg>
+            <span class="tooltip">GitHub</span>
+        </a>
+        
+        <a href="UCx49uah-FnX8GFM6W6eMc5w" target="_blank" class="floating-social-link youtube" title="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+            </svg>
+            <span class="tooltip">YouTube</span>
+        </a>
+        
+        <a href="https://www.facebook.com/profile.php?id=100009476133524" target="_blank" class="floating-social-link facebook" title="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+            </svg>
+            <span class="tooltip">Facebook</span>
+        </a>
+        
+        <a href="https://www.instagram.com/dqanirudh?igsh=ZTVpMXoyeGVtajV5" target="_blank" class="floating-social-link instagram" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+            </svg>
+            <span class="tooltip">Instagram</span>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Anirudh P</h2>
+                <h1>FULL STACK<br>WEB DEVELOPER</h1>
+                <p>Results-driven Web Developer with 3 years of experience specializing in HTML, CSS, JavaScript, React.js, and WordPress development. Building responsive, user-friendly, and performance-optimized web applications.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span>anirudh.p.dq@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>8137960881</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>Calicut, Kerala</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-button cta-primary">
+                        <span>Get In Touch</span>
+                        <span>→</span>
+                    </a>
+                    <a href="/assects/AnirudhP.pdf.pdf" class="cta-button cta-secondary" onclick="downloadResume(event)">
+                        <span>Download Resume</span>
+                        <span>↓</span>
+                    </a>
+                   
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="/assects/dq2.jpg" alt="Anirudh P - Full Stack Web Developer">
+                </div>
+                <div class="floating-circle circle-1">→</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+        <div class="experience-content">
+            <div class="experience-header">
+                <div class="experience-card-header">
+                    <h3>WordPress Developer - Frontend</h3>
+                    <div class="company">Midnay Tech Private Limited</div>
+                    <span class="period">2022 – Present • Malappuram</span>
+                </div>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-column">
+                    <div class="column-header">
+                        <div class="column-icon">🎨</div>
+                        <h4>Frontend Development & Design</h4>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Designed and developed responsive and user-friendly websites using HTML5, CSS3, JavaScript, and React.js</li>
+                        <li>Created intuitive and visually appealing UI layouts optimized for performance across all devices and screen sizes</li>
+                        <li>Implemented interactive and dynamic features using JavaScript and React, enhancing overall user experience</li>
+                        <li>Developed reusable, modular React components to improve scalability, maintainability, and code efficiency</li>
+                        <li>Built custom stylesheets using CSS3 and preprocessors like SASS/SCSS for cleaner and more maintainable code</li>
+                        <li>Integrated modern CSS frameworks such as Bootstrap and Tailwind CSS for rapid UI development</li>
+                        <li>Utilized React Hooks (useState, useEffect, etc.) to manage application state and lifecycle efficiently</li>
+                        <li>Ensured cross-browser compatibility and responsive design using media queries, Flexbox, and CSS Grid with a mobile-first approach</li>
+                        <li>Wrote clean and efficient JavaScript code for DOM manipulation, API integration, and front-end logic handling</li>
+                        <li>Optimized website performance through asset compression, lazy loading, and performance best practices</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-column">
+                    <div class="column-header">
+                        <div class="column-icon">⚙️</div>
+                        <h4>WordPress & Backend Development</h4>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Worked as a WordPress Full Stack Developer, building and customizing websites using WordPress CMS</li>
+                        <li>Developed and customized WordPress themes and plugins, ensuring responsive design and performance optimization</li>
+                        <li>Possess basic backend knowledge in PHP and MySQL, including handling WordPress databases and backend configurations</li>
+                        <li>Managed WordPress admin panels, content updates, plugin integrations, and site maintenance</li>
+                        <li>Experienced in Git and GitHub for version control, collaboration, and code management</li>
+                        <li>Debugged and resolved front-end issues using browser developer tools</li>
+                        <li>Conducted unit testing using tools like Jest and React Testing Library to ensure application reliability</li>
+                        <li>Collaborated closely with backend teams to integrate APIs and deliver seamless functionality</li>
+                        <li>Familiar with deploying applications using Netlify, Vercel, and GitHub Pages</li>
+                        <li>Stayed up-to-date with emerging front-end technologies, WordPress best practices, and web development trends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-content">
+            <h2 class="section-title">SKILLS & EXPERTISE</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">WordPress</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">SASS/SCSS</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">React Testing Library</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Creativity</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Mentoring Juniors</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Time Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <h2 class="section-title">EDUCATION</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Bachelor of Computer Application</h3>
+                <div class="institution">Malabar College of Arts and Science Moodadi</div>
+                <span class="year">2007 – 2021 • Calicut</span>
+            </div>
+            
+            <div class="education-card">
+                <h3>Plus Two Computer Science</h3>
+                <div class="institution">K.M.H.S.S Kottakal</div>
+                <span class="year">2015 – 2017 • Calicut</span>
+            </div>
+            
+            <div class="education-card">
+                <h3>SSLC</h3>
+                <div class="institution">G.V.H.S.S Payyoli</div>
+                <span class="year">2015 • Calicut</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">GET IN TOUCH</h2>
+        <div class="contact-content">
+            <div class="contact-left">
+                <div class="contact-intro">
+                    <h3>Let's Create Something Amazing Together</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                </div>
+                
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:anirudh.p.dq@gmail.com">anirudh.p.dq@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+918137960881">+91 8137960881</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Calicut, Kerala, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links-section">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/anirudh-p-624503273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Anirudhdq1998" target="_blank" title="GitHub" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+               
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-right">
+                <div class="contact-form-container">
+                    <h3>Send Me a Message</h3>
+                    <form class="contact-form" id="contactForm" action="mailto:anirudh.p.dq@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    
+                    <div class="form-note">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                        <p>Your default email client will open when you submit this form.</p>
+                    </div>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <p>Thanks for reaching out! I'll get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Anirudh P. All rights reserved. Built with passion and code.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
