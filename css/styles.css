@@ -147,7 +147,7 @@
             padding: 0 3rem;
             position: relative;
             overflow: hidden;
-           padding-top:5rem;
+           padding-top:5rem !importent;
         }
         
         .hero-content {
