@@ -1426,7 +1426,7 @@
      .mobile-nav {
          display: none;
          position: fixed;
-         top: 0;
+         top: 80px;
          left: 0;
          right: 0;
          padding: 2rem;
@@ -1637,7 +1637,7 @@
          }
          
          .mobile-nav {
-             top: 0;
+             top: 61px;
              padding: 1.5rem;
          }
          
