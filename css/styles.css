@@ -1437,11 +1437,11 @@
      }
      
      .light-mode .mobile-nav {
-         background: rgba(248, 249, 252, 0.95);
+         background: rgba(248, 249, 252, 0.8);
      }
      
      .dark-mode .mobile-nav {
-         background: rgba(10, 10, 10, 0.95);
+         background: rgba(10, 10, 10, 0.8);
      }
      
      .mobile-nav.active {
