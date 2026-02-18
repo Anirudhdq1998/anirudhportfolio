@@ -38,8 +38,8 @@
             
             // Create a link to the PDF file
             const link = document.createElement('a');
-            link.href = '/assects/AnirudhP.pdf.pdf'; 
-            link.download = '/assects/AnirudhP.pdf.pdf';
+            link.href = 'assects/Anirudh.pdf.pdf'; 
+            link.download = 'assects/Anirudh.pdf.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
